@@ -115,7 +115,7 @@ html {
 #nav > li:hover > a {
     background-color: #ccc;
     color: #000;
-    display: inline-block;
+    display: block;
 }
 
 #nav li:hover .subnav {
@@ -150,11 +150,20 @@ html {
     font-size: 12px;
 } 
 
-#header .search-btn {
+#header .search-btn,
+#header .mobile-menu {
     float: right;
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 
-#header .search-icon {
+#header .mobile-menu {
+    display: none;
+}
+
+#header .search-icon,
+#header .menu-icon {
     color: #fff;
     font-size: 20px;
     line-height: 46px;
@@ -166,6 +175,14 @@ html {
 #header .search-icon:hover {
     background-color: #f44336;
     cursor: pointer;
+}
+
+#header .menu-icon:hover {
+    background-color: #ccc;
+}
+
+#header .mobile-menu:hover .menu-icon {
+    color: #000;
 }
 
 
@@ -192,15 +209,19 @@ html {
 #slider .text-description {
     margin-top: 25px;
     font-weight: bold;
+    text-shadow: 0 0 2px #000;
 }
 
 
 /* content css  */
 
 #content .content-section {
-    max-width: 800px;
+    width: 800px;
+    max-width: 100%;
     padding: 64px 0 112px;
     margin: auto;
+    padding-left: 16px;
+    padding-right: 16px;
 }
 
 #content .section-heading {
@@ -233,7 +254,7 @@ html {
 }
 
 #content .member-image {
-    width: 154px;
+    width: 100%;
     border-radius: 4px;
 }
 
